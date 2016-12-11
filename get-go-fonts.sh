@@ -7,7 +7,7 @@ set -o errexit
 
 [[ -x /usr/bin/fc-cache ]] || { echo "Linux only :(" >&2 ; exit 1; }
 
-dir=~/.fonts/Go
+dir="${1:-~/.fonts/Go}"
 [[ -d "$dir" ]] || mkdir -p "$dir"
 cd "$dir"
 
